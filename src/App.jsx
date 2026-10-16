@@ -1,11 +1,20 @@
 import "./App.css";
-import Dashboard from "./components/Dashboard.jsx";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import CriminalCase from "./components/CriminalCase/CriminalCase";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
   return (
-    <div>
-      <Dashboard />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={<Navigate to="/dashboard" replace />}
+        />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/criminal-case" element={<CriminalCase />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

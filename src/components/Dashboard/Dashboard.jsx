@@ -1,6 +1,5 @@
 
 import "./Dashboard.css";
-
 const cases = [
   {
     id: "CR-24-0817",
